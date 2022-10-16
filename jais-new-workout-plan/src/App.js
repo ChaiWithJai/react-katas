@@ -4,6 +4,11 @@ import KanyeQuote from './KanyeQuote.jsx'
 
 function App() {
   const [data, setData] = useState({ quote: null, isLoading: true });
+
+  // HINT YOU'RE GONNA USE THIS
+  // https://beta.reactjs.org/learn#responding-to-events
+  const handleClick = () => alert('What did I tell you!')
+
   /* eslint-disable  */
   useEffect(() => {
     const restAPIUrl = 'https://api.kanye.rest/';
@@ -12,7 +17,6 @@ function App() {
     fetch(restAPIUrl)
       .then(res => res.json())
       .then(({quote}) => {
-        console.log('Quote is:  ', quote);
         setData({quote, isLoading: false})
       });
 
@@ -21,13 +25,12 @@ function App() {
   return (
     <div className="App">
       {
-        /* 
-          Write some conditional logic here and give this a small refactor
-          Follow the docs here:  https://beta.reactjs.org/learn#conditional-rendering
-        */ 
+        !data.isLoading && <KanyeQuote quote={data.quote} />
       }
-      <KanyeQuote quote={data.quote} />
       <p>-Kanye West</p>
+      <button>
+        Don't Click Me!
+      </button>
     </div>
   );
 }
