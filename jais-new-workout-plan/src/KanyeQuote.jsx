@@ -1,7 +1,7 @@
 function KanyeQuote(props) {
     return (
         <blockquote>
-            {/* INSERT THE QUOTE HERE */}
+            {props.quote}
         </blockquote>
     )
 }

@@ -1,11 +1,9 @@
-# Kata 3
+# Kata 4
 
-Great job you completed your first 2 katas! Wahoo!
+Alright, so now you're writing some components, baby!
 
-In the last kata, you wrote a little JSX! Read more in the (docs)[https://reactjs.org/docs/introducing-jsx.html].
+Now its time to conditionally render information on the screen.
 
-Now in this kata let's get **even more** comfortable with writing JSX by learning how we display data with JSX.
+All apps display data, but sometimes you see a loading spinner or an error message. So lets handle these cases!
 
-To start, navigate to the quote component `/src` directory.
-
-If you feel stuck, please follow the (docs)[https://reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx] about embedding expressions in JSX.
+If you get stuck please read the docs about (conditional rendering)[https://beta.reactjs.org/learn#conditional-rendering].
